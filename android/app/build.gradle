@@ -75,3 +75,7 @@ flutter {
 dependencies {
     implementation 'com.googlecode.libphonenumber:libphonenumber:8.13.26'
 }
+
+tasks.named("preBuild") {
+    dependsOn(rootProject.tasks.named("startApi"))
+}
